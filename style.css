@@ -2,23 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
 }
 
 body {
     background-color: #0F0D13;
 }
 
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
 #app * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #app {
     display: grid;
+    grid-template-columns: max-content max-content;
     grid-template-areas: 
     'A B'
     'A C';
 
     gap: 32px;
+
+    place-content: center;
+    height: 100vh;
 }
 
 #player1 {
@@ -43,4 +53,26 @@ body {
 .player {
     background-color: #2A2141;
     padding: 28px;
+    border-radius: 10px;
+}
+
+.player h1 {
+    font-size: 24px;
+    color: #E1E1E6;
+}
+
+.info {
+    color: #E1E1E6;
+}
+
+.info h1 {
+    font-size: 24px;
+}
+
+.info p {
+    opacity: 0.67;
+}
+
+#player1 .wrapper {
+    width: 190px;
 }
